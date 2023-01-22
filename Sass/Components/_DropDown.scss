@@ -1,0 +1,30 @@
+
+.DropDown {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 1rem;
+
+  &__List {
+    display: flex;
+    flex-direction: column;
+    gap : 1rem ;
+  }
+
+  &__Item {
+    cursor: pointer;
+    padding: 0.5rem 8rem 0.5rem 2rem ;
+    text-transform: capitalize;
+
+    > a {
+      color : $GrayColor ;
+      transition: color .3s ;
+    }
+
+    &:hover {
+      > a {
+        color : $PrimaryColor ;
+      }
+    }
+  }
+
+}

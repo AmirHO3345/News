@@ -1,0 +1,27 @@
+
+.Btn {
+
+  & , &:link , &:visited {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 1rem 4rem;
+    border-radius: 8px;
+    border: none;
+    transition: all .2s;
+    font-size: 1.6rem ;
+    letter-spacing: 3px;
+    outline : none ;
+    cursor: pointer ;
+  }
+
+  &:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($BlackColor , .2);
+  }
+
+  &:active , &:focus {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba($BlackColor , .2);
+  }
+}

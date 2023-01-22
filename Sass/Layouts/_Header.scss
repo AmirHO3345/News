@@ -1,0 +1,135 @@
+
+.HeaderPage {
+  position: relative;
+  width : 100% ;
+  background-color: $BlackColor;
+
+  &__Container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__Logo {
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+      height: 55px;
+
+      > img {
+        width : 100% ;
+        height : 100% ;
+      }
+
+      > h1 {
+        color: $WhiteColor ;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__Navs {
+    flex: 1;
+
+    > ul {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+  }
+
+  &__Nav {
+    position: relative;
+
+    > a {
+      display: block;
+      padding: 3rem 1rem;
+      color : $GrayColor;
+      cursor: pointer;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 4px;
+      background-color: $PrimaryColor;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      transform: translateX(-50%);
+      transition: width .2s;
+    }
+
+    &:hover {
+
+      > a {
+        color: $PrimaryColor;
+      }
+
+      &::after {
+        width: 100%;
+      }
+
+      .HeaderPage__DropDown {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__DropDown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    box-shadow: $PrimaryShadow;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+  }
+
+  &__Icons {
+    flex: .35;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.8rem;
+    gap: 20px;
+  }
+
+  &__Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $GrayColor_Extra_1;
+    color : $WhiteColor ;
+    transition: background-color .3s , color .2s;
+
+    &:hover {
+      background-color: $PrimaryColor;
+      color : $WhiteColor ;
+    }
+  }
+
+  &__Search {
+    position: absolute;
+    display: none;
+  }
+}

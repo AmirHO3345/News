@@ -1,0 +1,22 @@
+
+/* Start Response View */
+
+/*
+    37.5 ==> 600px ;
+    56.25 ==> 868px ;
+    112.5 ==> 1800px ;
+*/
+
+@mixin Manger_Respond($BreakPoints) {
+  @if ($BreakPoints == Phone) {
+    @media (max-width: 37.5em) { @content } ;
+  }
+  @if ($BreakPoints == Tablet) {
+    @media (max-width: 56.25em) { @content } ;
+  }
+  @if ($BreakPoints == Big_Desktop) {
+    @media (min-width: 112.5em) { @content } ;
+  }
+}
+
+/* End Response View */

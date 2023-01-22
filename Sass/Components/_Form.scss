@@ -1,0 +1,73 @@
+
+.Form {
+  padding: 1.5rem;
+
+  &__Group {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__Input {
+    width: 100% ;
+    height: 100% ;
+    outline: none;
+    padding : 12px 50px 12px 10px ;
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 5px ;
+    font-family: inherit ;
+    background-color: $WhiteColor_Extra_2;
+    transition: all .3s ease;
+
+    &:focus ,
+    &:not(:placeholder-shown) {
+      border-color: $PrimaryColor;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $GrayColor ;
+    }
+  }
+
+  &__Button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  &--SearchForm {
+
+    .Form__Button {
+      position: absolute;
+      top: 50% ;
+      right: 10px ;
+      transform: translateY(-50%);
+
+      i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 18px;
+        color : $PrimaryColor;
+        transition: all .3s;
+      }
+
+      &:hover {
+        i {
+          background-color: $PrimaryColor;
+          color : $WhiteColor ;
+        }
+      }
+    }
+  }
+
+}

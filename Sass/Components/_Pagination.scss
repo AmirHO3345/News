@@ -1,0 +1,61 @@
+
+.Pagination {
+
+  &__List {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap ;
+    align-items: center;
+    padding: 3rem 2rem;
+    gap: 2rem;
+    border-top: 2px solid #777;
+    font-size: 1.6rem;
+
+  }
+
+  &__Number {
+    $ValueSize : 40px;
+    width : $ValueSize ;
+    height : $ValueSize ;
+    line-height: $ValueSize ;
+    text-align: center ;
+
+    > a {
+      display: block ;
+      color : $GrayColor_Extra_1 ;
+      font-weight: 600 ;
+      border-radius: 50% ;
+      transition: all .3s ;
+
+      &:hover {
+        background-color: $PrimaryColor ;
+        color : $WhiteColor ;
+      }
+
+    }
+  }
+
+  &__Previous {
+    margin-right: 3rem ;
+
+    > a {
+      color : $PrimaryColor ;
+      letter-spacing: 2px ;
+    }
+  }
+
+  &__Next {
+    margin-left : 3rem ;
+
+    > a {
+      color : $PrimaryColor ;
+      letter-spacing: 2px ;
+    }
+  }
+
+  &__Continue {
+
+  }
+
+}

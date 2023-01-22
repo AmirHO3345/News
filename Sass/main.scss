@@ -1,0 +1,24 @@
+
+@import "./Sass/Abstract/Function";
+@import "./Sass/Abstract/Mixin";
+@import "./Sass/Abstract/Variables";
+
+@import "./Sass/Base/Base";
+@import "./Sass/Base/Typography";
+@import "./Sass/Base/Utility";
+
+@import "./Sass/Components/DropDown";
+@import "./Sass/Components/LastNews";
+@import "./Sass/Components/CategoryIcon";
+@import "./Sass/Components/Form";
+@import "./Sass/Components/CategoryCard";
+@import "./Sass/Components/Pagination";
+@import "./Sass/Components/Selector";
+@import "./Sass/Components/Button";
+
+@import "./Sass/Layouts/Header";
+@import "./Sass/Layouts/Section";
+@import "./Sass/Layouts/Footer";
+
+@import "./Sass/Pages/HomePage";
+@import "Pages/CategoryPage";
