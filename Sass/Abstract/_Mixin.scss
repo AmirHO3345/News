@@ -1,12 +1,9 @@
 
-/* Start Response View */
-
 /*
     37.5 ==> 600px ;
     56.25 ==> 868px ;
     112.5 ==> 1800px ;
 */
-
 @mixin Manger_Respond($BreakPoints) {
   @if ($BreakPoints == Phone) {
     @media (max-width: 37.5em) { @content } ;
@@ -19,4 +16,15 @@
   }
 }
 
-/* End Response View */
+@mixin IconPrepare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  color : $WhiteColor ;
+  transition: background-color .3s , color .2s;
+}
+

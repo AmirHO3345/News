@@ -14,72 +14,72 @@
     </head>
     <body>
         <header class="HeaderPage">
-            <div class="HeaderPage__Container">
-                <div class="HeaderPage__Logo">
-                    <a href="#">
-                        <img src="./Images/LogoWebSite.png" alt="LogoWebSite" />
-                        <h1>NewsWeb</h1>
-                    </a>
-                </div>
-                <nav class="HeaderPage__Navs">
-                    <ul>
-                        <li class="HeaderPage__Nav">
-                            <a href="#">Home</a>
-
-                        </li> <!--li => Active -->
-                        <li class="HeaderPage__Nav">
-                            <a href="#">News</a>
-                            <div class="HeaderPage__DropDown">
-                                <div class="DropDown">
-                                    <ul class="DropDown__List">
-                                        <li class="DropDown__Item">
-                                            <a href="#">Sport</a>
-                                        </li>
-                                        <li class="DropDown__Item">
-                                            <a href="#">Economy</a>
-                                        </li>
-                                        <li class="DropDown__Item">
-                                            <a href="#">Fashion</a>
-                                        </li>
-                                        <li class="DropDown__Item">
-                                            <a href="#">Technology</a>
-                                        </li>
-                                        <li class="DropDown__Item">
-                                            <a href="#">See More</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="HeaderPage__Nav">
-                            <a href="#">Posts</a>
-                        </li>
-                        <li class="HeaderPage__Nav">
-                            <a href="#">Contact</a>
-                        </li>
-                        <li class="HeaderPage__Nav">
-                            <a href="#">About</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="HeaderPage__Icons">
-                    <i class="HeaderPage__Icon fa-solid fa-user"></i>
-                    <i class="HeaderPage__Icon fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="HeaderPage__Search">
-                    <form class="Form Form--WebSiteSearch">
-                        <div class="Form__Group">
-                            <input class="Form__Input"
-                                   name="Search"
-                                   placeholder="Search For Anything...">
-                        </div>
-                        <button class="Form__Button">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
-                </div>
+        <div class="HeaderPage__Container">
+            <div class="HeaderPage__Logo">
+                <a href="#">
+                    <img src="./Images/LogoWebSite.png" alt="LogoWebSite" />
+                    <h1>NewsWeb</h1>
+                </a>
             </div>
-        </header>
+            <nav class="HeaderPage__Navs">
+                <ul>
+                    <li class="HeaderPage__Nav">
+                        <a href="#">Home</a>
+
+                    </li> <!--li => Active -->
+                    <li class="HeaderPage__Nav">
+                        <a href="#">News</a>
+                        <div class="HeaderPage__DropDown">
+                            <div class="DropDown">
+                                <ul class="DropDown__List">
+                                    <li class="DropDown__Item">
+                                        <a href="#">Sport</a>
+                                    </li>
+                                    <li class="DropDown__Item">
+                                        <a href="#">Economy</a>
+                                    </li>
+                                    <li class="DropDown__Item">
+                                        <a href="#">Fashion</a>
+                                    </li>
+                                    <li class="DropDown__Item">
+                                        <a href="#">Technology</a>
+                                    </li>
+                                    <li class="DropDown__Item">
+                                        <a href="#">See More</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="HeaderPage__Nav">
+                        <a href="#">Posts</a>
+                    </li>
+                    <li class="HeaderPage__Nav">
+                        <a href="#">Contact</a>
+                    </li>
+                    <li class="HeaderPage__Nav">
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="HeaderPage__Icons">
+                <i class="HeaderPage__Icon fa-solid fa-user"></i>
+                <i class="HeaderPage__Icon fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="HeaderPage__Search">
+                <form class="Form Form--WebSiteSearch">
+                    <div class="Form__Group">
+                        <input class="Form__Input"
+                               name="Search"
+                               placeholder="Search For Anything...">
+                    </div>
+                    <button class="Form__Button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
         <main class="CategoryPage">
             <section class="Section CategoryPage__Section CategoryPage__Section--ViewCategories">
                 <div class="Section__Container">
@@ -189,7 +189,9 @@
                     </div>
                     <div class="Pagination">
                         <ul class="Pagination__List">
-                            <li class="Pagination__Previous"><a href="#">Prev</a></li>
+                            <li class="Pagination__Previous"><a href="#">
+                                <i class="fa-solid fa-caret-left"></i>
+                            </a></li>
                             <li class="Pagination__Number"><a href="#">1</a></li>
                             <!--                        <li class="Pagination__Continue">....</li>-->
                             <li class="Pagination__Number"><a href="#">2</a></li>
@@ -198,7 +200,9 @@
                             <li class="Pagination__Number"><a href="#">5</a></li>
                             <li class="Pagination__Continue">....</li>
                             <li class="Pagination__Number"><a href="#">21</a></li>
-                            <li class="Pagination__Next"><a href="#">Next</a></li>
+                            <li class="Pagination__Next"><a href="#">
+                                <i class="fa-solid fa-caret-right"></i>
+                            </a></li>
                         </ul>
                     </div>
                 </div>

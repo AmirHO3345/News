@@ -1,0 +1,128 @@
+
+.NewsCard {
+  position: relative;
+  cursor: pointer;
+
+  &--Large ,
+  &--Medium {
+    border-radius: 1rem;
+    overflow: hidden;
+
+    > .NewsCard__NewsImage {
+      width : 100% ;
+      height : 100% ;
+    }
+
+    > .NewsCard__Information {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+
+      .TitleNews__Category {
+        margin-bottom: 1rem;
+      }
+
+      .TitleNews__Title {
+        color: $WhiteColor;
+        font-size: 3rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+      }
+
+      .Details__Item {
+        color: $WhiteColor_Extra_1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% ;
+      height : 100% ;
+      background-image: linear-gradient(to bottom,rgba(0,0,0,0) 0%
+      ,rgba(0,0,0,.2) 47%,rgba(0,0,0,.8) 100%);
+      z-index: 1;
+    }
+  }
+
+  &--Large {
+    width: 100% ;
+    height: 100% ;
+
+    > .NewsCard__Information {
+      padding: 4rem;
+
+      .TitleNews__Title {
+        font-size: 3rem;
+        line-height: 1.3;
+      }
+    }
+  }
+
+  &--Medium {
+    width : 35rem ;
+    height : 35rem ;
+
+    > .NewsCard__Information {
+      padding: 2rem;
+
+      .TitleNews__Title {
+        font-size: 1.8rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &--Small {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+    border-radius: 0 10px 0 10px;
+
+    > .NewsCard__NewsImage {
+      width: 18rem;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    > .NewsCard__Information {
+      flex : 1 ;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .TitleNews__Title {
+        font-size: 1.8rem;
+        letter-spacing: 0;
+        line-height: 1.3;
+        font-weight: 600;
+      }
+
+      .Details__Item {
+        color: $GrayColor;
+      }
+    }
+  }
+
+  &__NewsImage {
+
+    > img {
+      width: 100% ;
+      height: 100% ;
+      transition: all .5s;
+    }
+  }
+
+  &:hover {
+
+    .NewsCard__NewsImage {
+
+      > img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

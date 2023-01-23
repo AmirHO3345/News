@@ -1,0 +1,395 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>News Details</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="CSS/Normalize.css">
+        <link rel="stylesheet" href="./Fonts/CSS/all.css">
+        <link rel="stylesheet" href="CSS/Style.css" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;
+            400;500;600;700&family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+              rel="stylesheet">
+    </head>
+    <body>
+    <header class="HeaderPage">
+        <div class="HeaderPage__Container">
+            <div class="HeaderPage__Logo">
+                <a href="#">
+                    <img src="./Images/LogoWebSite.png" alt="LogoWebSite" />
+                    <h1>NewsWeb</h1>
+                </a>
+            </div>
+            <nav class="HeaderPage__Navs">
+                <ul>
+                    <li class="HeaderPage__Nav">
+                        <a href="#">Home</a>
+
+                    </li> <!--li => Active -->
+                    <li class="HeaderPage__Nav">
+                        <a href="#">News</a>
+                        <div class="HeaderPage__DropDown">
+                            <div class="DropDown">
+                                <ul class="DropDown__List">
+                                    <li class="DropDown__Item">
+                                        <a href="#">Sport</a>
+                                    </li>
+                                    <li class="DropDown__Item">
+                                        <a href="#">Economy</a>
+                                    </li>
+                                    <li class="DropDown__Item">
+                                        <a href="#">Fashion</a>
+                                    </li>
+                                    <li class="DropDown__Item">
+                                        <a href="#">Technology</a>
+                                    </li>
+                                    <li class="DropDown__Item">
+                                        <a href="#">See More</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="HeaderPage__Nav">
+                        <a href="#">Posts</a>
+                    </li>
+                    <li class="HeaderPage__Nav">
+                        <a href="#">Contact</a>
+                    </li>
+                    <li class="HeaderPage__Nav">
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="HeaderPage__Icons">
+                <i class="HeaderPage__Icon fa-solid fa-user"></i>
+                <i class="HeaderPage__Icon fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="HeaderPage__Search">
+                <form class="Form Form--WebSiteSearch">
+                    <div class="Form__Group">
+                        <input class="Form__Input"
+                               name="Search"
+                               placeholder="Search For Anything...">
+                    </div>
+                    <button class="Form__Button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="DetailsPage">
+        <section class="Section DetailsPage__Section DetailsPage__Section--DetailsNews">
+            <div class="Section__Container">
+                <article class="DetailsNews">
+                    <div class="DetailsNews__TitleNews TitleNews">
+                        <div class="CategoryIcon TitleNews__Category">
+                            <a href="#"
+                               class="CategoryIcon__Link CategoryIcon__Link--Food">
+                                Food
+                            </a>
+                        </div>
+                        <h3 class="TitleNews__Title">
+                            Traditional design won’t save us in the COVID-19 era
+                        </h3>
+                        <div class="TitleNews__Details Details">
+                            <ul class="Details__List">
+                                <li class="Details__Item">
+                                    by
+                                    <span class="Details__Link">
+                                                <a href="#">Admin</a>
+                                            </span>
+                                </li>
+                                <li class="Details__Item">
+                                            <span class="Details__Icon">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                            </span>
+                                    March 18 , 2023
+                                </li>
+                                <li class="Details__Item">
+                                            <span class="Details__Icon">
+                                                <i class="fa-solid fa-comments"></i>
+                                            </span>
+                                    4 Comments
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="DetailsNews__Content">
+                        <div class="DetailsNews__Introduction">
+                            <div class="DetailsNews__Gallery">
+                                <div class="Gallery">
+                                    <div class="Gallery__MainImage">
+                                        <img src="./Images/Economy.jpg"
+                                             alt="ImageNews">
+                                    </div>
+                                    <div class="Gallery__OtherImages">
+                                        <div class="Gallery__SliderImages">
+                                            <a href="#">
+                                                <img src="./Images/Economy.jpg"
+                                                     alt="ImageNews">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./Images/Economy.jpg"
+                                                     alt="ImageNews">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./Images/Economy.jpg"
+                                                     alt="ImageNews">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./Images/Economy.jpg"
+                                                     alt="ImageNews">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./Images/Economy.jpg"
+                                                     alt="ImageNews">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="DetailsNews__Info DetailsNews__Info--Paragraph">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                    deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                    velit, veritatis voluptates? Tempore, vero.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                    deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                    velit, veritatis voluptates? Tempore, vero.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                    deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                    velit, veritatis voluptates? Tempore, vero.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                    deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                    velit, veritatis voluptates? Tempore, vero.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                    deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                    velit, veritatis voluptates? Tempore, vero.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                    deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                    velit, veritatis voluptates? Tempore, vero.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                    deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                    velit, veritatis voluptates? Tempore, vero.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                    deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                    velit, veritatis voluptates? Tempore, vero.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="DetailsNews__Info DetailsNews__Info--Title">
+                            <h3>Define Something</h3>
+                        </div>
+                        <div class="DetailsNews__Info DetailsNews__Info--Paragraph">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                velit, veritatis voluptates? Tempore, vero.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                velit, veritatis voluptates? Tempore, vero.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                velit, veritatis voluptates? Tempore, vero.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur consequatur cum
+                                deserunt dolor et fuga harum, magnam nihil officiis ratione rem sapiente tempore vel
+                                velit, veritatis voluptates? Tempore, vero.
+
+                            </p>
+                        </div>
+                        <div class="DetailsNews__Info DetailsNews__Info--Title">
+                            <h3>News Video</h3>
+                        </div>
+                        <div class="DetailsNews__Info DetailsNews__Info--Video">
+                            <embed src="https://www.youtube.com/embed/Sl5FwMSFnP8" />
+                        </div>
+                        <div class="DetailsNews__Info DetailsNews__Info--Title">
+                            <h3>Sharing That News</h3>
+                        </div>
+                        <div class="DetailsNews__Sharing">
+                            <ul class="SocialMediaIcons">
+                                <li><a href="#"><i class=" SocialMediaIcon SocialMediaIcon--Facebook fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class=" SocialMediaIcon SocialMediaIcon--Twitter fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#"><i class=" SocialMediaIcon SocialMediaIcon--Linked fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class=" SocialMediaIcon SocialMediaIcon--Pinterest fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                            <div class="PrintNews"><i class="fa-solid fa-print"></i></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="Section DetailsPage__Section DetailsPage__Section--NewsSuggestion">
+            <div class="Section__Container">
+                <h2 class="Section__Title">Related Posts</h2>
+                <div class="SuggestionsItems">
+                    <ul class="SuggestionsItems__List">
+                        <li class="SuggestionsItems__Item">
+                            <div class="NewsCard NewsCard--Medium">
+                                <div class="NewsCard__NewsImage">
+                                    <img src="./Images/Economy.jpg"
+                                        alt="NewsImage">
+                                </div>
+                                <div class="TitleNews NewsCard__Information">
+                                    <h3 class="TitleNews__Title">
+                                        Traditional design won’t save us in the COVID-19 era
+                                    </h3>
+                                    <div class="TitleNews__Details Details">
+                                        <ul class="Details__List">
+                                            <li class="Details__Item">
+                                                by
+                                                <span class="Details__Link">
+                                                <a href="#">Admin</a>
+                                            </span>
+                                            </li>
+                                            <li class="Details__Item">
+                                            <span class="Details__Icon">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                            </span>
+                                                March 18 , 2023
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="SuggestionsItems__Item">
+                            <div class="NewsCard NewsCard--Medium">
+                                <div class="NewsCard__NewsImage">
+                                    <img src="./Images/Economy.jpg"
+                                        alt="NewsImage">
+                                </div>
+                                <div class="TitleNews NewsCard__Information">
+                                    <h3 class="TitleNews__Title">
+                                        Traditional design won’t save us in the COVID-19 era
+                                    </h3>
+                                    <div class="TitleNews__Details Details">
+                                        <ul class="Details__List">
+                                            <li class="Details__Item">
+                                                by
+                                                <span class="Details__Link">
+                                                <a href="#">Admin</a>
+                                            </span>
+                                            </li>
+                                            <li class="Details__Item">
+                                            <span class="Details__Icon">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                            </span>
+                                                March 18 , 2023
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="SuggestionsItems__Item">
+                            <div class="NewsCard NewsCard--Medium">
+                                <div class="NewsCard__NewsImage">
+                                    <img src="./Images/Economy.jpg"
+                                         alt="NewsImage">
+                                </div>
+                                <div class="TitleNews NewsCard__Information">
+                                    <h3 class="TitleNews__Title">
+                                        Traditional design won’t save us in the COVID-19 era
+                                    </h3>
+                                    <div class="TitleNews__Details Details">
+                                        <ul class="Details__List">
+                                            <li class="Details__Item">
+                                                by
+                                                <span class="Details__Link">
+                                                <a href="#">Admin</a>
+                                            </span>
+                                            </li>
+                                            <li class="Details__Item">
+                                            <span class="Details__Icon">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                            </span>
+                                                March 18 , 2023
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="SuggestionsItems__Item">
+                            <div class="NewsCard NewsCard--Medium">
+                                <div class="NewsCard__NewsImage">
+                                    <img src="./Images/Economy.jpg"
+                                         alt="NewsImage">
+                                </div>
+                                <div class="TitleNews NewsCard__Information">
+                                    <h3 class="TitleNews__Title">
+                                        Traditional design won’t save us in the COVID-19 era
+                                    </h3>
+                                    <div class="TitleNews__Details Details">
+                                        <ul class="Details__List">
+                                            <li class="Details__Item">
+                                                by
+                                                <span class="Details__Link">
+                                                <a href="#">Admin</a>
+                                            </span>
+                                            </li>
+                                            <li class="Details__Item">
+                                            <span class="Details__Icon">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                            </span>
+                                                March 18 , 2023
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="FooterPage">
+        <div class="FooterPage__Container">
+            <div class="FooterPage--Info">
+                <div class="FooterPage__Part FooterPage__Part--1">
+                    <h3>About us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad alias
+                        assumenda commodi consequatur cumque doloribus est eum facere facilis, magni nam obcaecati
+                        pariatur, quae quasi quo temporibus veritatis!</p>
+                </div>
+                <div class="FooterPage__Part FooterPage__Part--2">
+                    <h3>Our Service</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad alias
+                        assumenda commodi consequatur cumque doloribus est eum facere facilis, magni nam obcaecati
+                        pariatur, quae quasi quo temporibus veritatis!</p>
+                </div>
+                <div class="FooterPage__Part FooterPage__Part--3">
+                    <h3>Voting</h3>
+                    <form>
+                        <div class="Form__Group">
+                            <div class="Selector">
+                                <select name="Opinion">
+                                    <option value disabled="disabled" selected="selected">
+                                        How is our site ...
+                                    </option>
+                                    <option value="#">Bad</option>
+                                    <option value="#">Not Bad</option>
+                                    <option value="#">Nice</option>
+                                    <option value="#">Very Nice</option>
+                                </select>
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                        </div>
+                        <div class="Form__Button">
+                            <button class="Btn">Vote</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="FooterPage--CopyRight">
+            <p>
+                Created By
+                <span class="Focus">Amir</span> | ©2023 All Rights Reserved
+            </p>
+        </div>
+    </footer>
+    </body>
+</html>

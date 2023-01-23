@@ -98,6 +98,7 @@
     box-shadow: $PrimaryShadow;
     visibility: hidden;
     opacity: 0;
+    z-index: $MiddleLayer;
     transition: all .3s;
   }
 

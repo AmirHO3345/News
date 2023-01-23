@@ -2,11 +2,22 @@
 .HomePage {
 
   &__Section {
+    
+  }
 
-    &--LastNews {
+  .LastNews {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
 
-      .LastNews {
-        padding: 1rem;
+    &__NewsList {
+      flex: 1;
+
+      > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
       }
     }
   }
