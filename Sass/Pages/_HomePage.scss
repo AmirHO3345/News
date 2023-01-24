@@ -2,23 +2,102 @@
 .HomePage {
 
   &__Section {
-    
+
+    &--TrendingVideos {
+      background-color: $BlackColor;
+      margin-bottom: 10rem;
+
+      .Section__Title {
+        color : $WhiteColor ;
+      }
+    }
   }
 
   .LastNews {
     display: flex;
     width: 100%;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
 
+    &__Newer {
+      flex-basis: 66.66666%;
+    }
+
     &__NewsList {
-      flex: 1;
+      flex-basis: 33.33333%;
 
       > ul {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
       }
+    }
+  }
+
+  .TrendingStories {
+
+    &__List {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      row-gap: 3rem ;
+    }
+
+    &__Item {
+      flex-basis: calc(50% - 2rem);
+    }
+  }
+
+  .TrendingVideos {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+
+    &__BigVideos {
+      flex-basis: 66.66666%;
+    }
+
+    &__SmallVideos {
+      flex-basis: 33.33333%;
+
+      > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .NewsCard {
+
+          &__Information {
+
+            .TitleNews__Title {
+              color : $WhiteColor ;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Mix {
+    display: flex;
+
+    &__PartOne {
+
+      .PartOne {
+
+        &__News {
+          display: flex;
+          flex-direction: column;
+          row-gap: 3rem;
+
+
+        }
+      }
+    }
+
+    &__PartTwo {
+
     }
   }
 }
