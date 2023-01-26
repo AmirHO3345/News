@@ -1,18 +1,6 @@
 
 .Ads {
-
-
-  &--Rectangular {
-    width: 100%;
-    height: 10rem;
-  }
-
-  &--Square {
-
-  }
-
-  > img {
-    width: 100% ;
-    height: 100% ;
-  }
+  width : 100% ;
+  border-radius: 10px ;
+  overflow: hidden;
 }

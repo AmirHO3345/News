@@ -4,10 +4,12 @@
   &__Section {
 
     &--DetailsNews {
+      padding: 8rem 0 4rem 0 ;
       background-color: #fff;
     }
 
     &--NewsSuggestion {
+      padding: 6rem 0 4rem 0 ;
       background-color: $WhiteColor_Extra_3;
     }
   }
@@ -126,35 +128,6 @@
       align-items: center;
       justify-content: center;
       gap: 2rem;
-
-      .SocialMediaIcons {
-        display: flex;
-        gap: 2rem;
-
-        a {
-          font-size: 1.6rem;
-
-          .SocialMediaIcon {
-            @include IconPrepare ;
-
-            &--Facebook {
-              background-color: #3B5998;
-            }
-
-            &--Twitter {
-              background-color: #00B6F1;
-            }
-
-            &--Linked {
-              background-color: #007BB6;
-            }
-
-            &--Pinterest {
-              background-color: #CB2027;
-            }
-          }
-        }
-      }
 
       .PrintNews {
 

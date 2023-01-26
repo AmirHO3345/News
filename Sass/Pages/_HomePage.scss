@@ -3,13 +3,25 @@
 
   &__Section {
 
+    &--LastNews {
+      padding: 8rem 0 4rem 0 ;
+    }
+
+    &--TrendingStories {
+      padding: 2rem 0 8rem 0;
+    }
+
     &--TrendingVideos {
+      padding: 8rem 0;
       background-color: $BlackColor;
-      margin-bottom: 10rem;
 
       .Section__Title {
         color : $WhiteColor ;
       }
+    }
+
+    &--Mix {
+      padding: 8rem 0 5rem 0 ;
     }
   }
 
@@ -17,7 +29,6 @@
     display: flex;
     width: 100%;
     gap: 2rem;
-    padding: 1rem;
 
     &__Newer {
       flex-basis: 66.66666%;
@@ -83,6 +94,8 @@
     display: flex;
 
     &__PartOne {
+      flex-basis: 66.6666%;
+      padding: 0 3rem 0 0;
 
       .PartOne {
 
@@ -93,11 +106,46 @@
 
 
         }
+
+        &__Ads {
+          margin-bottom: 5rem ;
+        }
       }
     }
 
     &__PartTwo {
+      flex-basis: 33.3333%;
 
+      > *:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+
+      .PartTwo {
+
+        &__BoxSide {
+
+          &--Category {
+
+            .BoxSide__Content {
+              display: flex;
+              flex-wrap: wrap;
+              row-gap: 1.5rem;
+              justify-content: center;
+              column-gap: 2rem;
+            }
+          }
+
+          &--SocialMedia {
+
+            .SocialMedia {
+
+              &__List {
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

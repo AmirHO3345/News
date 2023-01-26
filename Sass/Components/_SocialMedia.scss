@@ -1,0 +1,42 @@
+
+.SocialMedia {
+  position: relative;
+
+  &__List {
+    display: flex;
+    gap: 2rem;
+
+    > li {
+
+      a {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__Icon {
+    @include IconPrepare ;
+    background-color: $WhiteColor_Extra_2;
+    color : $GrayColor ;
+
+    &:hover {
+      color : $WhiteColor ;
+
+      &.SocialMedia__Icon--Facebook {
+        background-color: #3B5998;
+      }
+
+      &.SocialMedia__Icon--Twitter {
+        background-color: #00B6F1;
+      }
+
+      &.SocialMedia__Icon--Linked {
+        background-color: #007BB6;
+      }
+
+      &.SocialMedia__Icon--Pinterest {
+        background-color: #CB2027;
+      }
+    }
+  }
+}
