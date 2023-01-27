@@ -108,20 +108,16 @@
     justify-content: flex-end;
     align-items: center;
     font-size: 1.8rem;
-    gap: 20px;
+    gap: 2rem;
   }
 
   &__Icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    cursor: pointer;
+    @include IconPrepare ;
     background-color: $GrayColor_Extra_1;
-    color : $WhiteColor ;
-    transition: background-color .3s , color .2s;
+
+    &--Mobile {
+      display: none;
+    }
 
     &:hover {
       background-color: $PrimaryColor;
@@ -132,5 +128,27 @@
   &__Search {
     position: absolute;
     display: none;
+  }
+
+  @include Manger_Respond(Tablet) {
+
+    &__Container {
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    &__Navs {
+      display: none ;
+    }
+
+    &__Icons {
+      gap: 1rem;
+    }
+
+    &__Icon {
+      &--Mobile {
+        display: flex;
+      }
+    }
   }
 }

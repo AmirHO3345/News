@@ -8,7 +8,7 @@
   }
 
   &__Container {
-    width: 125rem ;
-    margin : 0 auto ;
+
+    @include ContainerProperty ;
   }
 }

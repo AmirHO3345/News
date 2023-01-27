@@ -1,5 +1,6 @@
 
 .Gallery {
+  position: relative;
   width: 100%;
   height: 100%;
 
@@ -15,6 +16,35 @@
     }
   }
 
+  &__OtherImages {
+    position: relative;
+
+    .Arrow_Right ,
+    .Arrow_Left {
+      @include IconPrepare ;
+      position: absolute;
+      color : $WhiteColor ;
+      background-color: $PrimaryColor;
+      font-size: 1.5rem ;
+      z-index: $LowLayer;
+      top : 50% ;
+      transform: translateY(-50%);
+
+      &:hover {
+        box-shadow: $DarkShadow;
+        transform: translateY(calc(-50% - .3rem));
+      }
+    }
+
+    .Arrow_Right {
+      right : -2rem ;
+    }
+
+    .Arrow_Left {
+      left: -2rem;
+    }
+  }
+
   &__SliderImages {
     width: 100% ;
     display: flex;
@@ -22,7 +52,6 @@
     gap: 1.5rem;
     overflow-y: hidden;
     overflow-x: scroll;
-    padding: 0 0 1.5rem 0;
 
     > a {
       flex: 0 0 15rem;
@@ -34,5 +63,11 @@
         border-radius: 10px;
       }
     }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
+
+
 }

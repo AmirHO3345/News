@@ -3,7 +3,7 @@
 
   &__Section {
 
-    &--LastNews {
+    &--LastNewsImage {
       padding: 8rem 0 4rem 0 ;
     }
 
@@ -11,37 +11,36 @@
       padding: 2rem 0 8rem 0;
     }
 
-    &--TrendingVideos {
+    &--LastNewsVideo {
       padding: 8rem 0;
       background-color: $BlackColor;
 
       .Section__Title {
         color : $WhiteColor ;
       }
+
+      .LastNewsView {
+
+        &__NewsList {
+
+          > ul {
+
+            .NewsCard {
+
+              &__Information {
+
+                .TitleNews__Title {
+                  color : $WhiteColor ;
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     &--Mix {
       padding: 8rem 0 5rem 0 ;
-    }
-  }
-
-  .LastNews {
-    display: flex;
-    width: 100%;
-    gap: 2rem;
-
-    &__Newer {
-      flex-basis: 66.66666%;
-    }
-
-    &__NewsList {
-      flex-basis: 33.33333%;
-
-      > ul {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
     }
   }
 
@@ -57,36 +56,6 @@
 
     &__Item {
       flex-basis: calc(50% - 2rem);
-    }
-  }
-
-  .TrendingVideos {
-    display: flex;
-    width: 100%;
-    gap: 2rem;
-
-    &__BigVideos {
-      flex-basis: 66.66666%;
-    }
-
-    &__SmallVideos {
-      flex-basis: 33.33333%;
-
-      > ul {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-
-        .NewsCard {
-
-          &__Information {
-
-            .TitleNews__Title {
-              color : $WhiteColor ;
-            }
-          }
-        }
-      }
     }
   }
 
@@ -127,11 +96,16 @@
           &--Category {
 
             .BoxSide__Content {
-              display: flex;
-              flex-wrap: wrap;
-              row-gap: 1.5rem;
-              justify-content: center;
-              column-gap: 2rem;
+              display: grid ;
+              grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+              grid-row-gap: 3rem;
+              grid-column-gap: 2rem;
+
+              @include Manger_Respond(Tablet) {
+                grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+                grid-row-gap: 3rem;
+                grid-column-gap: 2rem;
+              }
             }
           }
 
@@ -148,4 +122,32 @@
       }
     }
   }
+
+  @include Manger_Respond(Tablet) {
+
+    .Mix {
+      flex-direction: column ;
+      row-gap: 5rem ;
+
+      &__PartOne {
+        flex-basis: 100%;
+        padding: 0;
+      }
+
+      &__PartTwo {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  @include Manger_Respond(Phone) {
+
+    .TrendingStories {
+
+      &__Item {
+        flex-basis: 100% ;
+      }
+    }
+  }
+
 }

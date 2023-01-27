@@ -1,18 +1,41 @@
 
-/*
-    37.5 ==> 600px ;
-    56.25 ==> 868px ;
-    112.5 ==> 1800px ;
-*/
 @mixin Manger_Respond($BreakPoints) {
   @if ($BreakPoints == Phone) {
-    @media (max-width: 37.5em) { @content } ;
+    @media (max-width: 47.9em) { @content } ; // 766.4px
   }
   @if ($BreakPoints == Tablet) {
-    @media (max-width: 56.25em) { @content } ;
+    @media (max-width: 61.9em) { @content } ; // 990.4px
+  }
+  @if ($BreakPoints == Desktop) {
+    @media (max-width: 69.9em) { @content } ; // 1,118.4px
   }
   @if ($BreakPoints == Big_Desktop) {
-    @media (min-width: 112.5em) { @content } ;
+    @media (min-width: 70em) { @content } ; // 1120px
+  }
+}
+
+@mixin ContainerProperty {
+  width: 100% ;
+  padding: 0 5rem ;
+
+  @include Manger_Respond(Desktop) {
+    max-width: 130rem ;
+    margin : 0 auto ;
+  }
+
+  @include Manger_Respond(Tablet) {
+    max-width: 105rem ;
+    margin : 0 auto ;
+  }
+
+  @include Manger_Respond(Phone) {
+    width: 100% ;
+    padding: 0 1rem ;
+  }
+
+  @include Manger_Respond(Big_Desktop) {
+    max-width: 135rem;
+    margin: 0 auto ;
   }
 }
 
@@ -25,6 +48,6 @@
   border-radius: 50%;
   cursor: pointer;
   color : $WhiteColor ;
-  transition: background-color .3s , color .2s;
+  transition: all .3s;
 }
 

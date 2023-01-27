@@ -9,25 +9,25 @@
 
 html {
 
-  font-size: 62.5%; // 10px
-
-  @include Manger_Respond(Phone) {
-    font-size: 50% ;
+  @include Manger_Respond(Desktop) {
+    font-size: 55%;
   }
 
   @include Manger_Respond(Tablet) {
-    font-size: 56.25%;
+    font-size: 50% ;
+  }
+
+  @include Manger_Respond(Phone) {
+    font-size: 46% ;
   }
 
   @include Manger_Respond(Big_Desktop) {
-    font-size: 75%;
+    font-size: 62.5%;
   }
-
 }
 
 body {
   box-sizing: border-box ;
-  //height : 10000px ;
 }
 
 ul {

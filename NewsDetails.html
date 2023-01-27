@@ -80,6 +80,82 @@
             </div>
         </div>
     </header>
+    <aside class="MenuMobile">
+        <div class="MenuMobile__Overlay"></div>
+        <div class="MenuMobile__Menu">
+            <div class="MenuMobile__Head">
+                <div class="MenuMobile__Logo">
+                    <a href="#">
+                        <img src="./Images/LogoWebSite.png" alt="LogoWebSite"/>
+                        <h1>NewsWeb</h1>
+                    </a>
+                </div>
+                <div class="MenuMobile__Close">
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <nav class="MenuMobile__Navs">
+                <ul class="MenuMobile__ListNav">
+                    <li class="MenuMobile__Nav MenuMobile__Nav--Main">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="MenuMobile__Nav MenuMobile__Nav--Main">
+                        <a href="#">
+                            News
+                            <i class="fa-solid fa-caret-right"></i>
+                        </a>
+                        <ul class="MenuMobile__SubListNav">
+                            <li class="MenuMobile__Nav MenuMobile__Nav--Sub">
+                                <a href="#">Sport</a>
+                            </li>
+                            <li class="MenuMobile__Nav MenuMobile__Nav--Sub">
+                                <a href="#">
+                                    News
+                                    <i class="fa-solid fa-caret-right"></i>
+                                </a>
+                                <ul class="MenuMobile__SubListNav">
+                                    <li class="MenuMobile__Nav MenuMobile__Nav--Sub">
+                                        <a href="#">Sport</a>
+                                    </li>
+                                    <li class="MenuMobile__Nav MenuMobile__Nav--Sub">
+                                        <a href="#">Sport</a>
+                                    </li>
+                                    <li class="MenuMobile__Nav MenuMobile__Nav--Sub">
+                                        <a href="#">Sport</a>
+                                    </li>
+                                    <li class="MenuMobile__Nav MenuMobile__Nav--Sub">
+                                        <a href="#">Sport</a>
+                                    </li>
+                                    <li class="MenuMobile__Nav MenuMobile__Nav--Sub">
+                                        <a href="#">Sport</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="MenuMobile__Nav MenuMobile__Nav--Sub">
+                                <a href="#">Sport</a>
+                            </li>
+                            <li class="MenuMobile__Nav MenuMobile__Nav--Sub">
+                                <a href="#">Sport</a>
+                            </li>
+                            <li class="MenuMobile__Nav MenuMobile__Nav--Sub">
+                                <a href="#">Sport</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="MenuMobile__Nav MenuMobile__Nav--Main">
+                        <a href="#">Posts</a>
+                    </li>
+                    <li class="MenuMobile__Nav MenuMobile__Nav--Main">
+                        <a href="#">Contact</a>
+                    </li>
+                    <li class="MenuMobile__Nav MenuMobile__Nav--Main">
+                        <a href="#">About</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </aside>
     <main class="DetailsPage">
         <section class="Section DetailsPage__Section DetailsPage__Section--DetailsNews">
             <div class="Section__Container">
@@ -126,6 +202,7 @@
                                              alt="ImageNews">
                                     </div>
                                     <div class="Gallery__OtherImages">
+                                        <i class="Arrow_Right fa-solid fa-arrow-right"></i>
                                         <div class="Gallery__SliderImages">
                                             <a href="#">
                                                 <img src="./Images/Economy.jpg"
@@ -147,7 +224,12 @@
                                                 <img src="./Images/Economy.jpg"
                                                      alt="ImageNews">
                                             </a>
+                                            <a href="#">
+                                                <img src="./Images/Economy.jpg"
+                                                     alt="ImageNews">
+                                            </a>
                                         </div>
+                                        <i class="Arrow_Left fa-solid fa-arrow-left"></i>
                                     </div>
                                 </div>
                             </div>
@@ -203,22 +285,19 @@
                         <div class="DetailsNews__Info DetailsNews__Info--Video">
                             <embed src="https://www.youtube.com/embed/Sl5FwMSFnP8" />
                         </div>
-                        <div class="DetailsNews__Info DetailsNews__Info--Title">
-                            <h3>Sharing That News</h3>
-                        </div>
-                        <div class="DetailsNews__Sharing">
-                            <div class="SocialMedia">
-                                <ul class="SocialMedia__List">
-                                    <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Facebook fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Twitter fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Linked fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Pinterest fa-brands fa-pinterest-p"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="PrintNews"><i class="fa-solid fa-print"></i></div>
-                        </div>
                     </div>
                 </article>
+            </div>
+            <div class="ArticleSharing">
+                <div class="SocialMedia">
+                    <ul class="SocialMedia__List">
+                        <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Facebook fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Twitter fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Linked fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Pinterest fa-brands fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+                <div class="PrintNews"><i class="fa-solid fa-print"></i></div>
             </div>
         </section>
         <section class="Section DetailsPage__Section DetailsPage__Section--NewsSuggestion">
