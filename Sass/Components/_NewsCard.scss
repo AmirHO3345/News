@@ -259,3 +259,22 @@
     }
   }
 }
+
+@include Language(Arabic) {
+
+  .NewsCard {
+
+    &--Large ,
+    &--Medium {
+
+      @include Manger_Respond(Phone) {
+
+        > .NewsCard__IconPlay {
+          left: 4rem;
+          top: 2rem;
+          right: inherit;
+        }
+      }
+    }
+  }
+}

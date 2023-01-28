@@ -28,3 +28,13 @@
   }
 
 }
+
+@include Language(Arabic) {
+
+  .DropDown {
+
+    &__Item {
+      padding: 0.5rem 2rem 0.5rem 8rem ;
+    }
+  }
+}

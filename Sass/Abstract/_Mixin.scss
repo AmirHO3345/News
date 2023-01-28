@@ -43,11 +43,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   cursor: pointer;
   color : $WhiteColor ;
   transition: all .3s;
 }
 
+@mixin Language($Lang) {
+  @if ($Lang == Arabic) {
+    html[lang="ar-SY"] { @content }
+  }
+  @if ($Lang == English) {
+    html[lang="en_US"] { @content }
+  }
+}

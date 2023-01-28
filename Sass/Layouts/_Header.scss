@@ -125,9 +125,37 @@
     }
   }
 
-  &__Search {
+  &__HeaderSearch {
     position: absolute;
-    display: none;
+    display: flex ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $BlackColor;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    visibility: hidden ;
+    opacity: 0;
+    transition: all .3s ;
+
+    &.Open {
+      visibility: visible ;
+      opacity: 1;
+    }
+
+    .HeaderSearch {
+
+      &__Form {
+        flex-basis: 80% ;
+      }
+
+      &__Close {
+        @include IconPrepare ;
+        font-size: 2.5rem ;
+      }
+    }
   }
 
   @include Manger_Respond(Tablet) {
@@ -149,6 +177,18 @@
       &--Mobile {
         display: flex;
       }
+    }
+  }
+
+}
+
+@include Language(Arabic) {
+
+  .HeaderPage {
+
+    &__DropDown {
+      left: initial;
+      right: 0 ;
     }
   }
 }

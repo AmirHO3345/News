@@ -66,6 +66,9 @@ a {
     .DropDown__Item:hover > a {
       color: #0181B0; }
 
+html[lang="ar-SY"] .DropDown__Item {
+  padding: 0.5rem 2rem 0.5rem 8rem; }
+
 .CategoryIcon__Link {
   display: inline-block;
   color: #F8F8F8;
@@ -83,13 +86,13 @@ a {
   .Form__Group {
     position: relative; }
     .Form__Group:not(:last-child) {
-      margin-bottom: 10px; }
+      margin-bottom: 1rem; }
   .Form__Input {
     width: 100%;
     height: 100%;
     outline: none;
-    padding: 12px 50px 12px 10px;
-    font-size: 18px;
+    padding: 1.2rem 5rem 1.2rem 1rem;
+    font-size: 1.8rem;
     font-weight: 500;
     border: 2px solid transparent;
     border-radius: 5px;
@@ -104,26 +107,38 @@ a {
     outline: none;
     border: none;
     background-color: transparent; }
-  .Form--SearchForm .Form__Button {
+  .Form--SearchForm .Form__Button, .Form--WebSiteSearch .Form__Button {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 1rem;
     transform: translateY(-50%); }
-    .Form--SearchForm .Form__Button i {
+    .Form--SearchForm .Form__Button i, .Form--WebSiteSearch .Form__Button i {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 35px;
-      height: 35px;
+      width: 3.5rem;
+      height: 3.5rem;
       border-radius: 50%;
       cursor: pointer;
+      color: #F8F8F8;
+      transition: all .3s;
       background-color: transparent;
-      font-size: 18px;
+      font-size: 1.8rem;
       color: #0181B0;
       transition: all .3s; }
-    .Form--SearchForm .Form__Button:hover i {
+    .Form--SearchForm .Form__Button:hover i, .Form--WebSiteSearch .Form__Button:hover i {
       background-color: #0181B0;
       color: #F8F8F8; }
+  .Form--WebSiteSearch .Form__Input {
+    background-color: #303030;
+    color: #F8F8F8; }
+
+html[lang="ar-SY"] .Form__Input {
+  padding: 1.2rem 1rem 1.2rem 5rem; }
+
+html[lang="ar-SY"] .Form--SearchForm .Form__Button, html[lang="ar-SY"] .Form--WebSiteSearch .Form__Button {
+  left: 1rem;
+  right: initial; }
 
 .CategoryCard {
   position: relative;
@@ -222,6 +237,9 @@ a {
     color: #0181B0;
     font-size: 2rem; }
 
+html[lang="ar-SY"] .Pagination__Previous, html[lang="ar-SY"] .Pagination__Next {
+  transform: rotate(180deg); }
+
 .Selector {
   position: relative;
   width: 100%; }
@@ -309,8 +327,8 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 35px;
-      height: 35px;
+      width: 3.5rem;
+      height: 3.5rem;
       border-radius: 50%;
       cursor: pointer;
       color: #F8F8F8;
@@ -511,6 +529,12 @@ a {
   .NewsCard:hover .NewsCard__NewsImage > img {
     transform: scale(1.1); }
 
+@media (max-width: 47.9em) {
+  html[lang="ar-SY"] .NewsCard--Large > .NewsCard__IconPlay, html[lang="ar-SY"] .NewsCard--Medium > .NewsCard__IconPlay {
+    left: 4rem;
+    top: 2rem;
+    right: inherit; } }
+
 .Ads {
   width: 100%;
   border-radius: 10px;
@@ -527,8 +551,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35px;
-    height: 35px;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     cursor: pointer;
     color: #F8F8F8;
@@ -660,8 +684,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35px;
-    height: 35px;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     cursor: pointer;
     color: #F8F8F8;
@@ -672,9 +696,36 @@ a {
     .HeaderPage__Icon:hover {
       background-color: #0181B0;
       color: #F8F8F8; }
-  .HeaderPage__Search {
+  .HeaderPage__HeaderSearch {
     position: absolute;
-    display: none; }
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222222;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s; }
+    .HeaderPage__HeaderSearch.Open {
+      visibility: visible;
+      opacity: 1; }
+    .HeaderPage__HeaderSearch .HeaderSearch__Form {
+      flex-basis: 80%; }
+    .HeaderPage__HeaderSearch .HeaderSearch__Close {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      color: #F8F8F8;
+      transition: all .3s;
+      font-size: 2.5rem; }
   @media (max-width: 61.9em) {
     .HeaderPage__Container {
       justify-content: space-between;
@@ -685,6 +736,10 @@ a {
       gap: 1rem; }
     .HeaderPage__Icon--Mobile {
       display: flex; } }
+
+html[lang="ar-SY"] .HeaderPage__DropDown {
+  left: initial;
+  right: 0; }
 
 .Section {
   width: 100%; }
@@ -779,14 +834,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35px;
-    height: 35px;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     cursor: pointer;
     color: #F8F8F8;
     transition: all .3s;
     color: #000;
-    font-size: 3rem;
+    font-size: 2.5rem;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
     .MenuMobile__Close > i:hover {
       color: #fff;
@@ -821,15 +876,17 @@ a {
         right: .5rem;
         top: .3rem;
         transition: all .3s; }
+    .MenuMobile__Nav > a.Show {
+      color: #0181B0; }
+      .MenuMobile__Nav > a.Show > i {
+        transform: rotate(90deg); }
+      .MenuMobile__Nav > a.Show + .MenuMobile__SubListNav {
+        padding: 1.5rem 0;
+        max-height: 100vh;
+        opacity: 1;
+        visibility: visible; }
     .MenuMobile__Nav:hover > a {
       color: #0181B0; }
-      .MenuMobile__Nav:hover > a > i {
-        transform: rotate(90deg); }
-    .MenuMobile__Nav:hover > .MenuMobile__SubListNav {
-      padding: 1.5rem 0;
-      max-height: 100vh;
-      opacity: 1;
-      visibility: visible; }
   .MenuMobile__SubListNav {
     visibility: hidden;
     max-height: 0;
@@ -854,6 +911,20 @@ a {
     .MenuMobile.Open .MenuMobile__Overlay {
       visibility: visible;
       opacity: 1; }
+
+html[lang="ar-SY"] .MenuMobile__Menu {
+  left: initial;
+  right: 0;
+  top: 0;
+  transform: translateX(100%); }
+
+html[lang="ar-SY"] .MenuMobile__Nav > a > i {
+  right: initial;
+  left: .5rem;
+  transform: rotate(180deg); }
+
+html[lang="ar-SY"] .MenuMobile__Nav > a.Show > i {
+  transform: rotate(90deg); }
 
 .FooterPage {
   position: relative;
@@ -1011,6 +1082,9 @@ a {
   .HomePage .TrendingStories__Item {
     flex-basis: 100%; } }
 
+html[lang="ar-SY"] .HomePage .Mix__PartOne {
+  padding: 0 0 0 3rem; }
+
 .CategoryPage__Section {
   padding: 8rem 0; }
   .CategoryPage__Section--ViewCategories .SearchBox {
@@ -1111,15 +1185,16 @@ a {
     gap: 2rem;
     padding: 1.5rem 1rem;
     border-radius: 50px;
-    background-color: #fafafa; }
+    background-color: #fafafa;
+    z-index: 3; }
     .DetailsPage .ArticleSharing .SocialMedia__List {
       flex-direction: column; }
     .DetailsPage .ArticleSharing .PrintNews > i {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 35px;
-      height: 35px;
+      width: 3.5rem;
+      height: 3.5rem;
       border-radius: 50%;
       cursor: pointer;
       color: #F8F8F8;
@@ -1147,3 +1222,25 @@ a {
       justify-content: center; }
       .DetailsPage .ArticleSharing .SocialMedia__List {
         flex-direction: row; } }
+
+html[lang="ar-SY"] .DetailsPage .DetailsNews__Introduction .DetailsNews__Gallery {
+  float: left;
+  margin-left: 0;
+  margin-right: 2rem; }
+
+html[lang="ar-SY"] .DetailsPage .DetailsNews__Introduction .DetailsNews__Info {
+  margin-bottom: 0; }
+  html[lang="ar-SY"] .DetailsPage .DetailsNews__Introduction .DetailsNews__Info--Paragraph::first-letter {
+    color: #222222;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: none, serif; }
+
+html[lang="ar-SY"] .DetailsPage .DetailsNews__Introduction::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+html[lang="ar-SY"] .DetailsPage .ArticleSharing {
+  left: initial;
+  right: 1rem; }

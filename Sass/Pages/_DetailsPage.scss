@@ -137,6 +137,7 @@
     padding: 1.5rem 1rem ;
     border-radius: 50px ;
     background-color: $GrayColor_Extra_3 ;
+    z-index: $MiddleLayer;
 
     .SocialMedia {
 
@@ -197,6 +198,49 @@
     }
   }
 
+}
+
+@include Language(Arabic) {
+
+  .DetailsPage {
+
+    .DetailsNews {
+
+      &__Introduction {
+
+        .DetailsNews__Gallery {
+          float: left ;
+          margin-left: 0 ;
+          margin-right: 2rem ;
+        }
+
+        .DetailsNews__Info {
+          margin-bottom: 0;
+
+          &--Paragraph {
+
+            &::first-letter {
+              color : $BlackColor;
+              font-size: 3rem;
+              font-weight: 600;
+              font-family: none, serif;
+            }
+          }
+        }
+
+        &::after {
+          content : "" ;
+          display: table ;
+          clear: both ;
+        }
+      }
+    }
+
+    .ArticleSharing {
+      left : initial ;
+      right: 1rem ;
+    }
+  }
 }
 
 

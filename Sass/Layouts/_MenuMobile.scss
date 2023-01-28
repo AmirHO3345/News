@@ -57,7 +57,7 @@
     > i {
       @include IconPrepare ;
       color: #000 ;
-      font-size: 3rem ;
+      font-size: 2.5rem ;
       box-shadow: $DarkShadow;
 
       &:hover {
@@ -110,21 +110,24 @@
       }
     }
 
-    &:hover {
+    > a.Show {
+      color: $PrimaryColor ;
 
-      > a {
-        color: $PrimaryColor ;
-
-        > i {
-          transform: rotate(90deg);
-        }
+      > i {
+        transform: rotate(90deg);
       }
 
-      > .MenuMobile__SubListNav {
+      & + .MenuMobile__SubListNav {
         padding: 1.5rem 0 ;
         max-height: 100vh ;
         opacity: 1 ;
         visibility: visible ;
+      }
+    }
+
+    &:hover {
+      > a {
+        color: $PrimaryColor ;
       }
     }
   }
@@ -163,4 +166,36 @@
     }
   }
 
+}
+
+@include Language(Arabic) {
+
+  .MenuMobile {
+
+    &__Menu {
+      left : initial ;
+      right: 0 ;
+      top: 0 ;
+      transform: translateX(100%);
+    }
+
+    &__Nav {
+
+      > a {
+
+        > i {
+          right: initial ;
+          left: .5rem ;
+          transform: rotate(180deg);
+        }
+      }
+
+      > a.Show {
+
+        > i {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
 }

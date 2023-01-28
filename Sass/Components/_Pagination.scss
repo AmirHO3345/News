@@ -62,3 +62,14 @@
   }
 
 }
+
+@include Language(Arabic) {
+
+  .Pagination {
+
+    &__Previous ,
+    &__Next {
+      transform: rotate(180deg);
+    }
+  }
+}
