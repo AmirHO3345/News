@@ -14,73 +14,132 @@
     </head>
     <body>
         <header class="HeaderPage">
-        <div class="HeaderPage__Container">
-            <div class="HeaderPage__Logo">
-                <a href="#">
-                    <img src="./Images/LogoWebSite.png" alt="LogoWebSite" />
-                    <h1>NewsWeb</h1>
-                </a>
-            </div>
-            <nav class="HeaderPage__Navs">
-                <ul>
-                    <li class="HeaderPage__Nav">
-                        <a href="#">Home</a>
+        <div class="HeaderPage__Wrap HeaderPage__Wrap--Nav">
+            <div class="HeaderPage__Container">
+                <div class="HeaderPage__Logo">
+                    <a href="#">
+                        <img src="./Images/LogoWebSite.png" alt="LogoWebSite" />
+                        <h1>NewsWeb</h1>
+                    </a>
+                </div>
+                <nav class="HeaderPage__Navs">
+                    <ul>
+                        <li class="HeaderPage__Nav">
+                            <a href="#">Home</a>
 
-                    </li> <!--li => Active -->
-                    <li class="HeaderPage__Nav">
-                        <a href="#">News</a>
-                        <div class="HeaderPage__DropDown">
-                            <div class="DropDown">
-                                <ul class="DropDown__List">
-                                    <li class="DropDown__Item">
-                                        <a href="#">Sport</a>
-                                    </li>
-                                    <li class="DropDown__Item">
-                                        <a href="#">Economy</a>
-                                    </li>
-                                    <li class="DropDown__Item">
-                                        <a href="#">Fashion</a>
-                                    </li>
-                                    <li class="DropDown__Item">
-                                        <a href="#">Technology</a>
-                                    </li>
-                                    <li class="DropDown__Item">
-                                        <a href="#">See More</a>
-                                    </li>
-                                </ul>
+                        </li> <!--li => Active -->
+                        <li class="HeaderPage__Nav">
+                            <a href="#">News</a>
+                            <div class="HeaderPage__DropDown HeaderPage__DropDown--Main">
+                                <div class="DropDown">
+                                    <ul class="DropDown__List">
+                                        <li class="DropDown__Item">
+                                            <a href="#">
+                                                <i class="fa-solid fa-person-running"></i>
+                                                Sport
+                                            </a>
+                                        </li>
+                                        <li class="DropDown__Item">
+                                            <a href="#">
+                                                <i class="fa-solid fa-money-bill-wave"></i>
+                                                Economy
+                                            </a>
+                                        </li>
+                                        <li class="DropDown__Item">
+                                            <a href="#">
+                                                <i class="fa-solid fa-shirt"></i>
+                                                Fashion
+                                            </a>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                            <div class="HeaderPage__DropDown HeaderPage__DropDown--Sub">
+                                                <div class="DropDown">
+                                                    <ul class="DropDown__List">
+                                                        <li class="DropDown__Item">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-person-running"></i>
+                                                                Sport
+                                                            </a>
+                                                        </li>
+                                                        <li class="DropDown__Item">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-money-bill-wave"></i>
+                                                                Economy
+                                                            </a>
+                                                        </li>
+                                                        <li class="DropDown__Item">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-shirt"></i>
+                                                                Fashion
+                                                            </a>
+                                                        </li>
+                                                        <li class="DropDown__Item">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-microchip"></i>
+                                                                Technology
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="DropDown__Item">
+                                            <a href="#">
+                                                <i class="fa-solid fa-microchip"></i>
+                                                Technology
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="HeaderPage__Nav">
-                        <a href="#">Posts</a>
-                    </li>
-                    <li class="HeaderPage__Nav">
-                        <a href="#">Contact</a>
-                    </li>
-                    <li class="HeaderPage__Nav">
-                        <a href="#">About</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="HeaderPage__Icons">
-                <i class="HeaderPage__Icon fa-solid fa-user"></i>
-                <i class="HeaderPage__Icon fa-solid fa-magnifying-glass"></i>
-                <i class="HeaderPage__Icon HeaderPage__Icon--Mobile fa-solid fa-bars"></i>
+                        </li>
+                        <li class="HeaderPage__Nav">
+                            <a href="#">Posts</a>
+                        </li>
+                        <li class="HeaderPage__Nav">
+                            <a href="#">Contact</a>
+                        </li>
+                        <li class="HeaderPage__Nav">
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="HeaderPage__Icons">
+                    <i class="HeaderPage__Icon fa-solid fa-user"></i>
+                    <i class="HeaderPage__Icon fa-solid fa-magnifying-glass"></i>
+                    <i class="HeaderPage__Icon fa-sharp fa-solid fa-xmark" style="display: none"></i>
+                    <i class="HeaderPage__Icon HeaderPage__Icon--Mobile fa-solid fa-bars"></i>
+                </div>
             </div>
         </div>
-        <div class="HeaderPage__HeaderSearch HeaderSearch">
-            <form class="Form Form--WebSiteSearch HeaderSearch__Form">
-                <div class="Form__Group">
-                    <input class="Form__Input"
-                           name="Search"
-                           placeholder="Search For Anything...">
-                    <button class="Form__Button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
+        <div class="HeaderPage__Wrap HeaderPage__Wrap--NewsTicker">
+            <div class="HeaderPage__Container">
+                <div class="HeaderPage__NewsTicker">
+                    <div class="NewsTicker__Title">
+                        <i class="fa-solid fa-newspaper"></i>
+                        News
+                    </div>
+                    <div class="NewsTicker__News">
+                        <marquee>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet, at consectetur consequatur
+                                cupiditate debitis delectus dolorem ducimus id magnam nesciunt non officiis quam, quia
+                                quisquam reiciendis, rem tempore. Minima.</p>
+                        </marquee>
+                    </div>
                 </div>
-            </form>
-            <div class="HeaderSearch__Close">
-                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="HeaderPage__HeaderSearch">
+            <div class="HeaderPage__Container">
+                <form class="Form Form--WebSiteSearch">
+                    <div class="Form__Group">
+                        <input class="Form__Input"
+                               name="Search"
+                               placeholder="Search For Anything...">
+                        <button class="Form__Button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </header>
@@ -296,6 +355,14 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad alias
                             assumenda commodi consequatur cumque doloribus est eum facere facilis, magni nam obcaecati
                             pariatur, quae quasi quo temporibus veritatis!</p>
+                        <div class="SocialMedia SocialMedia--Orginal">
+                            <ul class="SocialMedia__List">
+                                <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Facebook fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Twitter fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Linked fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class=" SocialMedia__Icon SocialMedia__Icon--Pinterest fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="FooterPage__Part FooterPage__Part--2">
                         <h3>Our Service</h3>

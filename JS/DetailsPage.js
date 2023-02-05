@@ -45,6 +45,14 @@ class Gallery {
 
     #GalleryElement ;
 
+    #SliderGallery ;
+
+    #GalleryImageElements ;
+
+    #VenoboxList ;
+
+    #ImageIndex ;
+
     constructor(GalleryElement) {
         if(GalleryElement instanceof HTMLElement) {
             this.#GalleryElement = GalleryElement ;
@@ -54,53 +62,114 @@ class Gallery {
 
     #InitialElement() {
         const ImageScroll = this.#GalleryElement
+            .getElementsByClassName("Gallery__OtherImages").item(0) ;
+        this.#GalleryImageElements = ImageScroll
+            .getElementsByClassName("Gallery__SliderImage") ;
+        const ArrowRight = ImageScroll
+            .getElementsByClassName("Arrow_Right").item(0);
+        const ArrowLeft = ImageScroll
+            .getElementsByClassName("Arrow_Left").item(0);
+        this.#SliderGallery = this.#GalleryElement
             .getElementsByClassName("Gallery__SliderImages").item(0) ;
-        ImageScroll.addEventListener("scroll" , (event) => {
-            this.#ProcessSlider(event) ;
-        });
+        if(this.#GalleryImageElements.length > 0) {
+            // this.#InitialVenobox() ;
+            this.#ImageIndex = 0 ;
+            this.#ChangeImage(this.#ImageIndex);
+            if(this.#GalleryImageElements.length > 1) {
+                ArrowRight.addEventListener("click" , () => {
+                    this.#MoveSlide("Right") ;
+                });
+                ArrowLeft.addEventListener("click" , () => {
+                    this.#MoveSlide("Left") ;
+                });
+            } else {
+                ArrowRight.style.display = "none" ;
+                ArrowLeft.style.display = "none" ;
+            }
+        } else {
+            this.#ImageIndex = -1 ;
+            ArrowRight.style.display = "none" ;
+            ArrowLeft.style.display = "none" ;
+        }
     }
 
-    #ProcessSlider(EventScroll) {
-        const ParentWidth = EventScroll.target.offsetWidth ;
-        const ChildWidth = EventScroll.target.scrollWidth ;
-        const CurrentPosition = EventScroll.target.scrollLeft + ParentWidth ;
-        const PartParent = ChildWidth / ParentWidth ;
-        console.log("ParentWidth : " , ParentWidth) ;
-        console.log("ChildWidth : " , ChildWidth) ;
-        console.log("CurrentPosition : " , CurrentPosition) ;
-        this.#ViewArrowRight(false) ;
-        this.#ViewArrowLeft(false) ;
-        for (let i = 1; i <= Math.round(PartParent) ; i++)
-            if(ParentWidth * (i-1) <= CurrentPosition &&
-                CurrentPosition < ParentWidth * (i+1)) {
-                if(i > 1 && i < PartParent) {
-                    this.#ViewArrowRight(true) ;
-                    this.#ViewArrowLeft(true) ;
-                } else if(i === 1 && PartParent > 1) {
-                    this.#ViewArrowRight(true) ;
-                    this.#ViewArrowLeft(false) ;
-                } else if(i === PartParent && i > 1) {
-                    this.#ViewArrowRight(false) ;
-                    this.#ViewArrowLeft(true) ;
+    #InitialVenobox() {
+        const ImageMainContainer = this.#GalleryElement
+            .getElementsByClassName("Gallery__MainImage").item(0) ;
+        const Clones = ImageMainContainer.getElementsByTagName("a").item(0).cloneNode(false) ;
+        const frag = document.createDocumentFragment();
+        frag.append(Clones) ;
+        // for (let ImageItem of this.#GalleryImageElements) {
+        //     const SourceImage = ImageItem.querySelector("img").src ;
+        //     const AnchorElement = document.createElement("a") ;
+        //     AnchorElement.classList.add("venobox") ;
+        //     AnchorElement.setAttribute("data-gall" , "gallery_1") ;
+        //     AnchorElement.setAttribute("data-maxwidth" , "100%") ;
+        //     AnchorElement.setAttribute("title" , "ImageNews") ;
+        //     AnchorElement.setAttribute("href" , SourceImage) ;
+        //     if(this.#GalleryImageElements[0] === ImageItem)
+        //         AnchorElement.innerHTML = `<img src="${SourceImage}" alt="ImageNews" />`
+        //     frag.append(AnchorElement) ;
+        // }
+        ImageMainContainer.append(frag) ;
+        this.#VenoboxList = frag ;
+    }
+
+    #MoveSlide(Direction = String) {
+        const ViewWidth = this.#SliderGallery.offsetWidth ;
+        const ActuallyWidth = this.#SliderGallery.scrollWidth ;
+        const CurrentPosition = this.#SliderGallery.scrollLeft + ViewWidth ;
+        const PrevImage = this.#ImageIndex ;
+        const ImageWidth = this.#GalleryImageElements
+            .item(this.#ImageIndex).offsetWidth + this.#CalcSpaceImage() ;
+        if(Direction === "Left") this.#ImageIndex -- ;
+        else if(Direction === "Right") this.#ImageIndex ++ ;
+        if(this.#ImageIndex < 0)
+            this.#ImageIndex = this.#GalleryImageElements.length - 1 ;
+        else if(this.#ImageIndex >= this.#GalleryImageElements.length)
+            this.#ImageIndex = 0 ;
+        const CalcImageArea = ImageWidth * (this.#ImageIndex + 1) ;
+        if(CalcImageArea / CurrentPosition > 1) {
+            // Last Left
+            this.#SliderGallery.scrollLeft = (ImageWidth * (this.#ImageIndex + 1))
+                - ViewWidth ;
+        } else {
+            // Last Right
+            if(Direction === "Left") {
+                const ImageArea =  ActuallyWidth - (ImageWidth * (this.#ImageIndex)) ;
+                const CurrentPositionRight = ActuallyWidth - CurrentPosition + ViewWidth ;
+                if(CurrentPositionRight < ImageArea) {
+                    this.#SliderGallery.scrollLeft = (ImageWidth * (this.#ImageIndex + 1))
+                        - ImageWidth;
                 }
             }
+            else if(Direction === "Right") {
+                const ImageArea = ImageWidth * (this.#ImageIndex) + ViewWidth - ImageWidth ;
+                if(CurrentPosition - ImageArea > 0) {
+                    this.#SliderGallery.scrollLeft = (ImageWidth * (this.#ImageIndex + 1))
+                        - ImageWidth ;
+                }
+            }
+        }
+        this.#ChangeImage(this.#ImageIndex , PrevImage) ;
     }
 
-    #ViewArrowLeft(IsView) {
-        const ArrowElement = this.#GalleryElement
-            .getElementsByClassName("Arrow_Left").item(0) ;
-        if(IsView)
-            ArrowElement.style.opacity = 1 ;
-        else
-            ArrowElement.style.opacity = 0 ;
+    #CalcSpaceImage() {
+        const ImageOne = this.#SliderGallery.children[0] ;
+        const ImageTwo = this.#SliderGallery.children[1] ;
+        return Math.abs(ImageOne.offsetLeft
+            + ImageOne.offsetWidth - ImageTwo.offsetLeft) ;
     }
 
-    #ViewArrowRight(IsView) {
-        const ArrowElement = this.#GalleryElement
-            .getElementsByClassName("Arrow_Right").item(0) ;
-        if(IsView)
-            ArrowElement.style.opacity = 1 ;
-        else
-            ArrowElement.style.opacity = 0 ;
+    #ChangeImage(NextIndexImage , PrevIndexImage) {
+        if(PrevIndexImage !== undefined) {
+            this.#GalleryImageElements.item(PrevIndexImage)
+                .classList.remove("SelectImage")
+        }
+        this.#GalleryElement.querySelector(".Gallery__MainImage a img")
+            .src = this.#GalleryImageElements.item(NextIndexImage)
+            .getElementsByTagName("img").item(0).src ;
+        this.#GalleryImageElements.item(NextIndexImage)
+            .classList.add("SelectImage");
     }
 }

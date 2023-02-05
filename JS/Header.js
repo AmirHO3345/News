@@ -20,8 +20,15 @@ export class HeaderPage {
             const IconsHeader = this.#HeaderElement.getElementsByClassName("HeaderPage__Icon") ;
             IconsHeader.item(1).addEventListener('click' , () => {
                 this.#OpenSearchField() ;
+                IconsHeader.item(1).style.display = "none" ;
+                IconsHeader.item(2).style.display = "inherit" ;
             }) ;
             IconsHeader.item(2).addEventListener('click' , () => {
+                IconsHeader.item(2).style.display = "none" ;
+                IconsHeader.item(1).style.display = "inherit" ;
+                this.#CloseSearchField() ;
+            });
+            IconsHeader.item(3).addEventListener('click' , () => {
                 this.#MenuMobileObject.OpenMenuMobile() ;
             });
         }
@@ -29,26 +36,17 @@ export class HeaderPage {
 
     #OpenSearchField() {
         const SearchField = this.#HeaderElement
-            .getElementsByClassName("HeaderSearch").item(0) ;
-        const IconClose = this.#HeaderElement
-            .getElementsByClassName("fa-sharp fa-solid fa-xmark").item(0) ;
+            .getElementsByClassName("HeaderPage__HeaderSearch").item(0) ;
         if(!SearchField.classList.contains("Open")) {
             SearchField.classList.add("Open") ;
-            IconClose.addEventListener("click" , () => {
-                this.#CloseSearchField() ;
-            }) ;
         }
     }
 
     #CloseSearchField() {
         const SearchField = this.#HeaderElement
-            .getElementsByClassName("HeaderSearch").item(0) ;
-        const IconClose = this.#HeaderElement
-            .getElementsByClassName("fa-sharp fa-solid fa-xmark").item(0) ;
+            .getElementsByClassName("HeaderPage__HeaderSearch").item(0) ;
         if(SearchField.classList.contains("Open")) {
             SearchField.classList.remove("Open") ;
-            const CloneElement = IconClose.cloneNode(true);
-            IconClose.replaceWith(CloneElement) ;
         }
     }
 }
